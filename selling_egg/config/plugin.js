@@ -1,13 +1,17 @@
-'use strict';
+'use strict'
 
 /** @type Egg.EggPlugin */
 module.exports = {
-  mysql: {
+  // mysql: {
+  //   enable: true,
+  //   package: 'egg-mysql'
+  // },
+  sequelize: {
     enable: true,
-    package: 'egg-mysql'
+    package: 'egg-sequelize'
   }
   // had enabled by egg
   // static: {
   //   enable: true,
   // }
-};
+}

@@ -21,10 +21,17 @@ class HomeController extends Controller {
   async Num (ctx) {
     const { site } = ctx.params
     const data = await ctx.service.queryNum.getNum()
-    this.ctx.body = {
-      data: data
+    if(data==null){
+      this.ctx.body = {
+        msg: '无票'
+      }
+    }else{
+      this.ctx.body = {
+        msg: '购票详情:',
+        data: data
+      }
     }
+    
   }
 }
 module.exports = HomeController
-
