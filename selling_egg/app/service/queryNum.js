@@ -20,7 +20,7 @@ class DataService extends Service {
       }
       
     }catch(err){
-      //await transaction.rollback();
+      await transaction.rollback();
       throw err;
     }
   }
